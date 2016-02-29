@@ -1,6 +1,6 @@
 <?php
-include("../classes/autoload.php");
 include("../config.php");
+include("../classes/autoload.php");
 ?>
 
 <html>
