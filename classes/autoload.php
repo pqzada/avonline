@@ -1,5 +1,6 @@
 <?php 
 
+require_once ('Admin.php');
 require_once ('Categoria.php');
 require_once ('Empresa.php');
 require_once ('Imagen.php');

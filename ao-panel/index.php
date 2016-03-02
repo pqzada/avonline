@@ -1,6 +1,10 @@
 <?php
 include("../config.php");
 include("../classes/autoload.php");
+
+if( !Admin::validateAccess() ) {
+	header("Location: /ao-panel/access.php");
+}
 ?>
 
 <html>
