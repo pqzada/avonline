@@ -10,7 +10,7 @@ class Tag {
 		$tag_list = explode(",", $tag_list);
 
 		// Delete all first
-		Tag::delete_tag_oferta($oferta_id);
+		Tag::deleteTagOferta($oferta_id);
 
 		foreach($tag_list as $nombre) {
 
@@ -57,7 +57,7 @@ class Tag {
 
 	}
 
-	public static function delete_tag_oferta($oferta_id) {
+	public static function deleteTagOferta($oferta_id) {
 
 		global $db;
 
@@ -65,6 +65,28 @@ class Tag {
 		$stmt = $db->prepare($sql);
 		$stmt->bindParam(':id_oferta', $oferta_id);   
 		$stmt->execute();
+
+	}
+
+	public static function findForOferta($id) {
+
+		global $db;
+
+		$sql = "SELECT id_tag FROM oferta_tag WHERE id_oferta = $id";
+		$stmt = $db->query($sql);
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $results;
+
+	}
+
+	public static function findNombreById($id) {
+
+		global $db;
+
+		$sql = "SELECT nombre FROM tag WHERE id = '$id'";
+		$stmt = $db->query($sql);
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $result;
 
 	}
 

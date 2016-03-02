@@ -41,6 +41,35 @@ class Oferta {
 
 	}
 
+	public function update() {
+
+		global $db;
+
+		$sql = "UPDATE oferta SET titulo = :titulo, descripcion = :descripcion, fecha_inicio = :fecha_inicio, fecha_fin = :fecha_fin, url_externa = :url_externa, url_interna = :url_interna, id_empresa = :id_empresa, id_estado = :id_estado WHERE id = :id";
+		$stmt = $db->prepare($sql);
+
+		$stmt->bindParam(":titulo", $this->data["titulo"]);
+		$stmt->bindParam(":descripcion", $this->data["descripcion"]);
+		$stmt->bindParam(":fecha_inicio", $this->data["fecha_inicio"]);
+		$stmt->bindParam(":fecha_fin", $this->data["fecha_fin"]);
+		$stmt->bindParam(":url_externa", $this->data["url_externa"]);
+		$stmt->bindParam(":url_interna", $url_interna);
+		$stmt->bindParam(":id_empresa", $this->data["empresa"]);
+		$stmt->bindParam(":id_estado", $this->data["estado"]);
+		$stmt->bindParam(":id", $this->data["id"]);
+
+		$result = $stmt->execute();
+
+		if( $result ) {
+			$this->id = $this->data["id"];
+			return true;
+		} else {
+			$this->errors = $stmt->errorInfo();
+			return false;
+		}
+
+	}
+
 	public function updateImagen($imagen_url) {
 
 		global $db;
@@ -80,6 +109,21 @@ class Oferta {
 
 		return $results;
 		
+	}
+
+	public static function findById($id) {
+
+		global $db;
+
+		$stmt = $db->query("SELECT * FROM oferta WHERE id = $id");
+		if($stmt !== false) {
+			$result = $stmt->fetch(PDO::FETCH_ASSOC);
+		} else {
+			$result = array();
+		}
+
+		return $result;
+
 	}
 
 	public function getOfertaId() {
