@@ -3,11 +3,11 @@ $ofertas = Oferta::findAllForTag($_GET["tag"]);
 $tag = Tag::findById($_GET["tag"]);
 ?>
 
-<div class="page-header">
-	<h1><?=$tag["nombre"]?></h1>
-</div>
+<div class="tag listado">
 
-<div class="tag">
+	<div class="page-header">
+		<h1><?=$tag["nombre"]?></h1>
+	</div>
 
 	<? foreach($ofertas as $oferta) : ?>
 

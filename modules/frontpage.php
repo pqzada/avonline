@@ -4,7 +4,7 @@ $ofertas = Oferta::findAllFrontPage();
 
 <title>Avispate ONLINE - Las mejores ofertas a sólo un click</title>
 
-<div class="frontpage">
+<div class="frontpage listado">
 
 	<br>
 

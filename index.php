@@ -17,13 +17,18 @@ $categorias = Categoria::findAll();
 	</head>
 
 	<body>
-		<div class="header">
-			<div id="logo">
+		<div class="header row">
+			<div id="logo" class="col-sm-12 col-xs-8">
 				<a href="/">
 					<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
 				</a>
 			</div>
-			<nav>
+			<div id="btn-nav" class="visible-xs-block col-xs-4">
+				<button class="btn btn-link btn-md pull-right">
+					<i class="glyphicon glyphicon-menu-hamburger"></i>
+				</button>
+			</div>
+			<nav class="col-xs-12" id="navbar">
 				<ul>
 					<? foreach($categorias as $categoria) : ?>
 						<li onclick="document.location='/<?=$categoria["id"]?>'">
@@ -42,5 +47,13 @@ $categorias = Categoria::findAll();
 			<a href="/tag">Tags</a>
 		</div>
 	</body>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#btn-nav').click(function(){
+				$('#navbar').toggle();
+			});
+		})
+	</script>
 
 </html>

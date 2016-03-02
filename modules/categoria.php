@@ -3,13 +3,11 @@ $ofertas = Oferta::findAllForCategoria($_GET["categoria"]);
 $categoria = Categoria::findById($_GET["categoria"]);
 ?>
 
-<div class="page-header">
+<div class="categoria listado">
+
+	<div class="page-header">
 		<h1><?=$categoria["nombre"]?></h1>
 	</div>
-
-<div class="categoria">
-
-	<br>
 
 	<? foreach($ofertas as $oferta) : ?>
 
@@ -18,7 +16,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 				<div class="thumbnail">
 					<img src="<?=$oferta["imagen"]?>">
 				</div>
-				<h3><?=$oferta["titulo"]?></h3>
+				<h2><?=$oferta["titulo"]?></h2>
 				<p><?=$oferta["descripcion"]?></p>
 			</a>
 		</article>

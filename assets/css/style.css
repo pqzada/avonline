@@ -48,6 +48,39 @@ body {
     padding-bottom: 60px;
 }
 
+#btn-nav {
+    padding: 10px 15px;
+}
+
+#btn-nav button {
+    color: white;
+    font-size: 24px;
+}
+
+.listado h2 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+}
+
+.listado .thumbnail {
+    margin-bottom: 10px;
+}
+
+.listado p {
+    font-size: 13px;
+    line-height: 12px;
+}
+
+.listado .page-header {
+    margin-top: 0px;
+}
+
+.listado .page-header h1 {
+    font-size: 24px;
+    margin-bottom: 0px;
+}
+
 .oferta h1 {
     font-size: 24px;
 }
@@ -71,5 +104,29 @@ body {
 
 .footer a {
     color: white;
+}
+
+@media (max-width: 767px) {
+    #navbar {
+        display: none;
+        height: auto;
+    }
+
+    #navbar ul {
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+    }
+
+    #navbar ul li {
+        width: 100%;
+        float: left;
+        height: 44px;
+        line-height: 44px;
+        padding: 0px 0px 0px 20px;
+    }
+
+
 }
 
