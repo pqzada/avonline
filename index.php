@@ -7,7 +7,7 @@ $categorias = Categoria::findAll();
 
 <html>
 
-	<head>
+	<head>		
 		<meta charset="UTF-8">
 		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
@@ -26,7 +26,9 @@ $categorias = Categoria::findAll();
 			<nav>
 				<ul>
 					<? foreach($categorias as $categoria) : ?>
-						<li><a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a></li>
+						<li onclick="document.location='/<?=$categoria["id"]?>'">
+							<a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a>
+						</li>
 					<? endforeach; ?>
 				</ul>
 			</nav>
