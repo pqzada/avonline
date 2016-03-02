@@ -19,7 +19,9 @@ $categorias = Categoria::findAll();
 	<body>
 		<div class="header">
 			<div id="logo">
-				<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
+				<a href="/">
+					<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
+				</a>
 			</div>
 			<nav>
 				<ul>

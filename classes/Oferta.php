@@ -155,6 +155,24 @@ class Oferta {
 		
 	}
 
+	public static function findAllForCategoria($categoria) {
+
+		global $db;
+
+		$stmt = $db->prepare('SELECT o.* FROM oferta o, oferta_categoria oc WHERE id_estado = "PUBLICADA" AND fecha_inicio <= now() AND fecha_fin >= now() AND o.id = oc.id_oferta AND oc.id_categoria = :categoria ORDER BY id DESC');
+		$stmt->bindParam(":categoria", $categoria);
+		$stmt->execute();
+		
+		if($stmt !== false) {
+			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} else {
+			$results = array();
+		}
+
+		return $results;
+		
+	}
+
 	public static function findById($id) {
 
 		global $db;

@@ -1,29 +1,15 @@
 <?php
 
-if( isset($_GET['mod']) ) {
+if( isset($_GET['categoria']) && !is_null($_GET['categoria']) && $_GET['categoria']!="" ) {
 
-	switch ($_GET['mod']) {
-		case 'ofertas':
-			include("modules/ofertas.php");
-			break;
-
-		case 'empresas':
-			include("modules/empresas.php");
-			break;
-
-		case 'categorias':
-			include("modules/categorias.php");
-			break;
-		
-		default:
-			include("modules/frontpage.php");
-			break;
+	if( isset($_GET['oferta']) ) {
+		include("modules/oferta.php");
+	} else {
+		include("modules/categoria.php");
 	}
 
 } else {
-
 	include("modules/frontpage.php");
-
 }
 
 ?>
