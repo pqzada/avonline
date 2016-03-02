@@ -52,6 +52,36 @@ class Oferta {
 
 	}
 
+	public static function findAll() {
+
+		global $db;
+
+		$stmt = $db->query("SELECT * FROM oferta");
+		if($stmt !== false) {
+			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} else {
+			$results = array();
+		}
+
+		return $results;
+		
+	}
+
+	public static function findAllFrontPage() {
+
+		global $db;
+
+		$stmt = $db->query('SELECT * FROM oferta WHERE id_estado = "PUBLICADA" AND fecha_inicio <= now() AND fecha_fin >= now() ORDER BY id');
+		if($stmt !== false) {
+			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} else {
+			$results = array();
+		}
+
+		return $results;
+		
+	}
+
 	public function getOfertaId() {
 		return $this->id;
 	}

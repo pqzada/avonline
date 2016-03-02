@@ -16,13 +16,13 @@ if( isset($_GET['mod']) ) {
 			break;
 		
 		default:
-			echo "Selecciona una opción válida";
+			include("modules/admin_index.php");
 			break;
 	}
 
 } else {
 
-	echo "Selecciona una opción";
+	include("modules/admin_index.php");
 
 }
 

@@ -26,12 +26,7 @@ if( isset($_POST['publicar']) ) {
 }
 
 // Listado de ofertas
-$stmt = $db->query('SELECT * FROM oferta');
-if($stmt !== false) {
-	$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-} else {
-	$results = array();
-}
+$results = Oferta::findAll();
 
 // Eliminar ofertas
 
