@@ -35,7 +35,6 @@ $categorias = Categoria::findAll();
 			<?php include("modules.php"); ?>
 		</div>
 		<div class="footer">
-			Avispate OnLine 2016 &copy Todos los derechos reservados
 		</div>
 	</body>
 

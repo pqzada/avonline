@@ -23,6 +23,20 @@ class Categoria {
 
 	}
 
+	public static function findById($id) {
+
+		global $db;
+
+		$sql = "SELECT * FROM categoria WHERE id = :id";
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(":id", $id);
+		$stmt->execute();
+		
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $result;
+
+	}
+
 	public static function deleteCategoriaOferta($oferta_id) {
 
 		global $db;

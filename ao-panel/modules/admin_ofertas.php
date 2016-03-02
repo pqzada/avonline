@@ -17,7 +17,7 @@ if( isset($_POST["editar"]) ) {
 		Categoria::register($_POST["categoria"], $oferta_id);
 		Tag::register($_POST["tags"], $oferta_id);
 
-		if( isset($_FILES["imagen"]) ) {
+		if( isset($_FILES["imagen"]) && !is_null($_FILES["imagen"]["name"]) && $_FILES["imagen"]["name"] != "" ) {
 			Oferta::deleteImagen($oferta_id);
 			$image_url = Imagen::upload($_FILES["imagen"], $oferta_id);
 			$ofertaMod->updateImagen($image_url);

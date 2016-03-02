@@ -90,6 +90,20 @@ class Tag {
 
 	}
 
+	public static function findById($id) {
+
+		global $db;
+
+		$sql = "SELECT * FROM tag WHERE id = :id";
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(":id", $id);
+		$stmt->execute();
+
+		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $result;
+
+	}
+
 
 }
 
