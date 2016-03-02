@@ -53,7 +53,7 @@ class Oferta {
 		$stmt->bindParam(":fecha_inicio", $this->data["fecha_inicio"]);
 		$stmt->bindParam(":fecha_fin", $this->data["fecha_fin"]);
 		$stmt->bindParam(":url_externa", $this->data["url_externa"]);
-		$stmt->bindParam(":url_interna", $url_interna);
+		$stmt->bindParam(":url_interna", $this->data["url_interna"]);
 		$stmt->bindParam(":id_empresa", $this->data["empresa"]);
 		$stmt->bindParam(":id_estado", $this->data["estado"]);
 		$stmt->bindParam(":id", $this->data["id"]);
@@ -68,6 +68,50 @@ class Oferta {
 			return false;
 		}
 
+	}
+
+	public static function deleteImagen($id) {
+
+		global $upload_images_folder;
+		unlink($upload_images_folder . "/$id.png");
+
+	}
+
+	public static function delete($id) {
+
+		global $db;		
+
+		// Delete imagen
+		Oferta::deleteImagen($id);
+
+		// Delete oferta
+		$sql = "DELETE FROM oferta WHERE id = :id_oferta";
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(":id_oferta", $id);
+		$stmt->execute();
+
+	}
+
+	public static function desactivate($id) {
+
+		global $db;
+
+		$sql = "UPDATE oferta SET id_estado = 'DESACTIVADA' WHERE id = :id_oferta";
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(":id_oferta", $id);
+		$stmt->execute();
+		
+	}
+
+	public static function publish($id) {
+
+		global $db;
+
+		$sql = "UPDATE oferta SET id_estado = 'PUBLICADA' WHERE id = :id_oferta";
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(":id_oferta", $id);
+		$stmt->execute();
+		
 	}
 
 	public function updateImagen($imagen_url) {

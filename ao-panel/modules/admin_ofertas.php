@@ -17,9 +17,11 @@ if( isset($_POST["editar"]) ) {
 		Categoria::register($_POST["categoria"], $oferta_id);
 		Tag::register($_POST["tags"], $oferta_id);
 
-		// TODO: Imagen
-		// $image_url = Imagen::upload($_FILES["imagen"], $oferta_id);
-		// $ofertaMod->updateImagen($image_url);
+		if( isset($_FILES["imagen"]) ) {
+			Oferta::deleteImagen($oferta_id);
+			$image_url = Imagen::upload($_FILES["imagen"], $oferta_id);
+			$ofertaMod->updateImagen($image_url);
+		}
 		
 	} else {
 		echo "<pre>";
@@ -32,6 +34,25 @@ if( isset($_POST["editar"]) ) {
 /**
  * ELIMINAR OFERTA
  */
+if( isset($_GET["eliminar"]) && !is_null($_GET["eliminar"]) ) {
+	Oferta::delete($_GET["eliminar"]);
+	Categoria::deleteCategoriaOferta($_GET["eliminar"]);
+	Tag::deleteTagOferta($_GET["eliminar"]);
+}
+
+/**
+ * DESACTIVAR OFERTA
+ */
+if( isset($_GET["desactivar"]) && !is_null($_GET["desactivar"]) ) {
+	Oferta::desactivate($_GET["desactivar"]);
+}
+
+/**
+ * PUBLICAR OFERTA
+ */
+if( isset($_GET["publicar"]) && !is_null($_GET["publicar"]) ) {
+	Oferta::publish($_GET["publicar"]);
+}
 
 /**
  * NUEVA OFERTA
