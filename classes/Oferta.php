@@ -56,7 +56,7 @@ class Oferta {
 
 		global $db;
 
-		$stmt = $db->query("SELECT * FROM oferta");
+		$stmt = $db->query("SELECT * FROM oferta ORDER BY id DESC");
 		if($stmt !== false) {
 			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		} else {
@@ -71,7 +71,7 @@ class Oferta {
 
 		global $db;
 
-		$stmt = $db->query('SELECT * FROM oferta WHERE id_estado = "PUBLICADA" AND fecha_inicio <= now() AND fecha_fin >= now() ORDER BY id');
+		$stmt = $db->query('SELECT * FROM oferta WHERE id_estado = "PUBLICADA" AND fecha_inicio <= now() AND fecha_fin >= now() ORDER BY id DESC');
 		if($stmt !== false) {
 			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		} else {

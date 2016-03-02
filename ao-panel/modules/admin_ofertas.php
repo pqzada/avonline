@@ -103,10 +103,11 @@ $results = Oferta::findAll();
 
 	<div class="col-md-8">
 		<h2>Ofertas registradas</h2>
-		<table class="table table-condensed">
+		<table class="table table-condensed table-hover">
 			<thead>
 				<tr>
 					<th>ID</th>
+					<th>Categoría</th>
 					<th>Titulo</th>
 					<th></th>
 				</tr>
@@ -116,7 +117,29 @@ $results = Oferta::findAll();
 					<tr>
 						<td><?=$r['id']?></td>
 						<td><?=$r['titulo']?></td>
-						<td>Eliminar Editar</td>
+						<td>
+							<button onclick="editar(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Editar">
+								<i class="glyphicon glyphicon-edit"></i>
+							</button>
+
+							<? if($r["id_estado"] == "PUBLICADA"): ?>
+								<button onclick="desactivar(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Dar de baja">
+									<i class="glyphicon glyphicon-eye-close"></i>
+								</button>
+							<? endif; ?>
+
+							<? if($r["id_estado"] != "PUBLICADA"): ?>
+								<button onclick="publicar(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Publicar">
+									<i class="glyphicon glyphicon-eye-open"></i>
+								</button>
+							<? endif; ?>
+
+							&nbsp;&nbsp;
+
+							<button onclick="eliminar(<?=$r['id']?>)" class="btn btn-danger btn-md" data-toggle="tooltip" data-placement="top" title="Eliminar">
+								<i class="glyphicon glyphicon-trash"></i>
+							</button>
+						</td>
 					</tr>
 				<? endforeach; ?>
 			</tbody>
@@ -124,3 +147,15 @@ $results = Oferta::findAll();
 	</div>
 
 </div>
+
+<script type="text/javascript">
+	
+$(document).ready(function() {
+
+	$(function () {
+	  $('[data-toggle="tooltip"]').tooltip()
+	})
+
+})
+
+</script>
