@@ -33,10 +33,13 @@ $categorias = Categoria::findAll();
 				</ul>
 			</nav>
 		</div>
-		<div class="container-fluid">	
+
+		<div class="container-fluid" id="main">	
 			<?php include("modules.php"); ?>
 		</div>
-		<div class="footer">
+
+		<div class="footer" class="row">
+			<a href="/tag">Tags</a>
 		</div>
 	</body>
 

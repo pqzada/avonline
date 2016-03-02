@@ -173,6 +173,24 @@ class Oferta {
 		
 	}
 
+	public static function findAllForTag($tag) {
+
+		global $db;
+
+		$stmt = $db->prepare('SELECT o.* FROM oferta o, oferta_tag ot WHERE o.id = ot.id_oferta AND ot.id_tag = :tag ORDER BY id DESC');
+		$stmt->bindParam(":tag", $tag);
+		$stmt->execute();
+
+		if($stmt !== false) {
+			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} else {
+			$results = array();
+		}
+
+		return $results;
+		
+	}
+
 	public static function findById($id) {
 
 		global $db;

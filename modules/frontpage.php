@@ -15,7 +15,7 @@ $ofertas = Oferta::findAllFrontPage();
 				<div class="thumbnail">
 					<img src="<?=$oferta["imagen"]?>">
 				</div>
-				<h3><?=$oferta["titulo"]?></h3>
+				<h2><?=$oferta["titulo"]?></h2>
 				<p><?=$oferta["descripcion"]?></p>
 			</a>
 		</article>

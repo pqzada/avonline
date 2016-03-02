@@ -1,6 +1,11 @@
 <?php
 $ofertas = Oferta::findAllForCategoria($_GET["categoria"]);
+$categoria = Categoria::findById($_GET["categoria"]);
 ?>
+
+<div class="page-header">
+		<h1><?=$categoria["nombre"]?></h1>
+	</div>
 
 <div class="categoria">
 

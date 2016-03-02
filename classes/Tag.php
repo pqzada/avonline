@@ -15,7 +15,7 @@ class Tag {
 		foreach($tag_list as $nombre) {
 
 			// Normalizo Tag
-			$tag = Tag::find_by_nombre($nombre);
+			$tag = Tag::findByNombre($nombre);
 			if($tag === false) {
 				$tag = Tag::save($nombre);
 			} 
@@ -31,7 +31,7 @@ class Tag {
 
 	}
 
-	public static function find_by_nombre($nombre) {
+	public static function findByNombre($nombre) {
 
 		global $db;
 
@@ -100,6 +100,19 @@ class Tag {
 		$stmt->execute();
 
 		$result = $stmt->fetch(PDO::FETCH_ASSOC);
+		return $result;
+
+	}
+
+	public static function findAll() {
+
+		global $db;
+
+		$sql = "SELECT * FROM tag ORDER BY nombre ASC";
+		$stmt = $db->prepare($sql);
+		$stmt->execute();
+
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 		return $result;
 
 	}
