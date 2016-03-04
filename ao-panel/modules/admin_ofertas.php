@@ -100,7 +100,8 @@ if( isset($_GET["id"]) ) {
 	// Tags
 	$tags = Tag::findForOferta($oferta["id"]);
 	foreach($tags as $tag) {
-		$oferta["tags"][] = Tag::findNombreById($tag["id_tag"])["nombre"];
+		$tmp = Tag::findNombreById($tag["id_tag"]);
+		$oferta["tags"][] = $tmp["nombre"];
 	}
 	$oferta["tags"] = implode(", ", $oferta["tags"]);
 
