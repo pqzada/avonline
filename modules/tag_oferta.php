@@ -3,6 +3,8 @@ $ofertas = Oferta::findAllForTag($_GET["tag"]);
 $tag = Tag::findById($_GET["tag"]);
 ?>
 
+<title><?=$tag["nombre"]?> en descuento | Avispate ONLINE!</title>
+
 <div class="tag listado">
 
 	<div class="page-header">

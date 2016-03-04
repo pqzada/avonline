@@ -3,6 +3,8 @@ $ofertas = Oferta::findAllForCategoria($_GET["categoria"]);
 $categoria = Categoria::findById($_GET["categoria"]);
 ?>
 
+<title><?=$categoria["titulo"]?> | Avispate ONLINE!</title>
+
 <div class="categoria listado">
 
 	<div class="page-header">

@@ -1,6 +1,9 @@
 <?php
 $tags = Tag::findAll();
 ?>
+
+<title>Tags | Avíspate ONLINE!</title>
+
 <br>
 
 <div class="page-header">

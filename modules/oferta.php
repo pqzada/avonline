@@ -26,6 +26,8 @@ if( $oferta["id_estado"] == "DESACTIVADA" ) {
 
 ?>
 
+<title><?=$oferta["titulo"]?></title>
+
 <div class="oferta">
 	<div class="page-header">
 		<h1><?=$oferta["titulo"]?></h1>
