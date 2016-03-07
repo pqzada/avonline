@@ -29,7 +29,7 @@ $ofertas = Oferta::findAllFrontPage();
 				'initialtop': 20,
 				'extratop': 15,
 				'selector': '.listado article',
-				'wait': 300,
+				'wait': 1000,
 				'wrapperselector': '.listado',
 			});
 		})

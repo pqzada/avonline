@@ -32,7 +32,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 				'initialtop': 50,
 				'extratop': 15,
 				'selector': '.listado article',
-				'wait': 300,
+				'wait': 1000,
 				'wrapperselector': '.listado'				
 			});
 		})
