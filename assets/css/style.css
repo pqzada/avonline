@@ -3,6 +3,10 @@ body {
 	background-color: #321533;
 }
 
+.header {
+    margin-right: 0px;
+}
+
 .header #logo {
 	padding: 10px;
 }
@@ -57,10 +61,18 @@ body {
     font-size: 24px;
 }
 
+.listado {
+    position: relative;
+}
+
 .listado h2 {
     font-size: 20px;
     margin-top: 0px;
     margin-bottom: 5px;
+}
+
+.listado article {
+    margin-bottom: 25px;
 }
 
 .listado .thumbnail {

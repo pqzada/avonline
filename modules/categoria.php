@@ -26,4 +26,16 @@ $categoria = Categoria::findById($_GET["categoria"]);
 
 	<? endforeach; ?>
 
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.listado').reorder({
+				'initialtop': 50,
+				'extratop': 15,
+				'selector': '.listado article',
+				'wait': 300,
+				'wrapperselector': '.listado'				
+			});
+		})
+	</script>
+
 </div>
