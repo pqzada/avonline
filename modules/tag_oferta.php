@@ -27,7 +27,7 @@ $tag = Tag::findById($_GET["tag"]);
 		</article>
 	<? endif; ?>
 
-	<? if(Device::isMobile() && false): ?>
+	<? if(Device::isMobile()): ?>
 		<article class="col-xs-12 col-sm-4 col-md-3 banner">
 			<div class="thumbnail">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
