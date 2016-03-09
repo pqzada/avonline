@@ -27,7 +27,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 		</article>
 	<? endif; ?>
 
-	<? if(Device::isMobile()): ?>
+	<? if(Device::isMobile() && false): ?>
 		<article class="col-xs-12 col-sm-4 col-md-3 banner">
 			<div class="thumbnail">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
