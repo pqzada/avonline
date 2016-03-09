@@ -24,7 +24,8 @@ $ofertas = Oferta::findAllFrontPage();
 	<? endforeach; ?>
 
 	<script type="text/javascript">
-		$(document).ready(function(){
+
+		function callReorder() {
 			$('.listado').reorder({
 				'initialtop': 20,
 				'extratop': 15,
@@ -32,6 +33,13 @@ $ofertas = Oferta::findAllFrontPage();
 				'wait': 1000,
 				'wrapperselector': '.listado',
 			});
+		}
+
+		$(document).ready(function(){
+			callReorder();
+			setTimeout(function() {
+				callReorder();
+			}, 3000);
 		})
 	</script>
 
