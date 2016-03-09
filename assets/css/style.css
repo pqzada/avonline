@@ -108,6 +108,17 @@ body {
     text-transform: capitalize;
 }
 
+.banner {
+    background: orange;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.banner .thumbnail {
+    background: none;
+    border: 0px;
+}
+
 .footer {
     border-top: 1px solid #EFEFEF;
     padding: 20px;
