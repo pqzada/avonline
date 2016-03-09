@@ -37,17 +37,6 @@ $categorias = Categoria::findAll();
 				<a href="/">
 					<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
 				</a>
-
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- Skyscraper Desktop - Header -->
-<ins class="adsbygoogle"
-     style="display:inline-block;width:728px;height:90px"
-     data-ad-client="ca-pub-3186329023014409"
-     data-ad-slot="1704149375"></ins>
-<script>
-(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-
 			</div>
 			<div id="btn-nav" class="visible-xs-block col-xs-4">
 				<button class="btn btn-link btn-md pull-right">
