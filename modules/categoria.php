@@ -11,7 +11,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 		<h1><?=$categoria["nombre"]?></h1>
 	</div>
 
-	<? if(!Device::isMobile()): ?>
+	<? if(!Device::isMobile() && false): ?>
 		<article class="col-xs-12 col-sm-4 col-md-3 banner">
 			<div class="thumbnail">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -27,7 +27,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 		</article>
 	<? endif; ?>
 
-	<? if(Device::isMobile()): ?>
+	<? if(Device::isMobile() && false): ?>
 		<article class="col-xs-12 col-sm-4 col-md-3 banner">
 			<div class="thumbnail">
 				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -57,7 +57,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 			</a>
 		</article>
 
-		<? if($idx == 2 && Device::isMobile()): ?>
+		<? if($idx == 2 && Device::isMobile() && false): ?>
 			<article class="col-xs-12 col-sm-4 col-md-3 banner">
 				<div class="thumbnail" style="text-align: center;">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -73,7 +73,7 @@ $categoria = Categoria::findById($_GET["categoria"]);
 			</article>
 		<? endif; ?>
 
-		<? if($idx == 6 && !Device::isMobile()): ?>
+		<? if($idx == 6 && !Device::isMobile() && false): ?>
 			<article class="col-xs-12 col-sm-4 col-md-3 banner">
 				<div class="thumbnail" style="text-align: center;">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
