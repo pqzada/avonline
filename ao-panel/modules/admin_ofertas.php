@@ -227,6 +227,10 @@ if( isset($_GET["id"]) ) {
 								<i class="glyphicon glyphicon-edit"></i>
 							</button>
 
+							<button onclick="productos(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Productos">
+								<i class="glyphicon glyphicon-shopping-cart"></i>
+							</button>
+
 							<? if($r["id_estado"] == "PUBLICADA"): ?>
 								<button onclick="desactivar(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Desactivar">
 									<i class="glyphicon glyphicon-eye-close"></i>
@@ -265,6 +269,10 @@ $(document).ready(function() {
 
 function editar(id) {
 	document.location = "/ao-panel/?mod=ofertas&id=" + id;
+}
+
+function productos(id) {
+	document.location = "/ao-panel/?mod=productos&id_oferta=" + id;
 }
 
 function desactivar(id) {

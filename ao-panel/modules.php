@@ -14,6 +14,10 @@ if( isset($_GET['mod']) ) {
 		case 'categorias':
 			include("modules/admin_categorias.php");
 			break;
+
+		case 'productos':
+			include("modules/admin_productos.php");
+			break;
 		
 		default:
 			include("modules/admin_index.php");
