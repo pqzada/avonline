@@ -44,9 +44,9 @@ $ofertas = Oferta::findAllFrontPage();
 	<? foreach($ofertas as $oferta) : ?>
 
 		<article class="col-xs-12 col-sm-4 col-md-3">
-			<a href="<?=$oferta["url_interna"]?>" onclick="window.open('<?=$oferta["url_externa"]?>')">				
+			<a href="<?=$oferta["url_interna"]?>">				
 				<div class="thumbnail">
-					<img src="<?=$oferta["imagen"]?>">
+					<img src="<?=$oferta["imagen"]?>" class="img-rounded">
 				</div>
 				<h2><?=$oferta["titulo"]?></h2>
 				<p><?=$oferta["descripcion"]?></p>

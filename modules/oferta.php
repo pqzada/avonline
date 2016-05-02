@@ -94,7 +94,7 @@ foreach($oferta["categorias"] as $oc) {
 		<div class="row">
 			<? foreach($similares as $s) : ?>
 				<article class="col-xs-12 col-sm-4 col-md-3">
-					<a href="<?=$s["url_interna"]?>" onclick="window.open('<?=$s["url_externa"]?>')">				
+					<a href="<?=$s["url_interna"]?>">				
 						<div class="thumbnail">
 							<img src="<?=$s["imagen"]?>">
 						</div>
