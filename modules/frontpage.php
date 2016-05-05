@@ -49,8 +49,8 @@ $ofertas = Oferta::findAllFrontPage();
 					<img src="<?=$oferta["imagen"]?>" class="img-rounded">
 				</div>
 				<h2><?=$oferta["titulo"]?></h2>
-				<p><?=$oferta["descripcion"]?></p>
 			</a>
+			<p><?=$oferta["descripcion"]?></p>			
 		</article>
 
 		<? if($idx == 2 && Device::isMobile()): ?>
