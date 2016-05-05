@@ -37,6 +37,20 @@ foreach($oferta["categorias"] as $oc) {
 
 	<div class="col-md-4">
 		<img src="<?=$oferta["imagen"]?>" style="width:100%;">
+		<br><br>
+		<article class="col-xs-12 banner">
+			<div class="thumbnail">
+				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- @Pagina Desktop - Left AND Mobile-->
+				<ins class="adsbygoogle"
+				     style="display:inline-block;width:300px;height:250px"
+				     data-ad-client="ca-pub-3186329023014409"
+				     data-ad-slot="9227416175"></ins>
+				<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+			</div>
+		</article>
 	</div>
 
 	<div class="col-md-8">
