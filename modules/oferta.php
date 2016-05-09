@@ -129,6 +129,7 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 				<h4>Revisa las siguientes ofertas similares</small></h4>
 			<? endif; ?>
 		
+			<? if(false): ?>
 			<div class="row similares">
 				<? foreach($similares as $s) : ?>
 					<article class="col-xs-12">
@@ -145,7 +146,8 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 						</div>		
 					</article>
 				<? endforeach; ?>
-			</div>	
+			</div>
+			<? endif; ?>	
 
 		</div>
 	</div>
