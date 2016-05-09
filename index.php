@@ -65,7 +65,7 @@ $categorias = Categoria::findAll();
 		</div>
 
 		<div class="footer" class="row">
-			<a href="/tag">Tags</a>
+			<!-- <a href="/tag">Tags</a> -->
 		</div>
 	</body>
 

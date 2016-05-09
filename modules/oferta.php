@@ -116,7 +116,7 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 				<div class="col-xs-12 col-sm-6">
 					<label>Tags</label>
 					<? foreach($oferta["tags"] as $tag): ?>
-						<h3><a href="/tag/<?=$tag["id"]?>"><?=$tag["nombre"]?></a></h3>
+						<h3><?=$tag["nombre"]?></h3>
 					<? endforeach; ?>
 				</div>
 			</div>
