@@ -33,28 +33,34 @@ $categorias = Categoria::findAll();
 
 	<body>
 		<div class="header row">
-			<div id="logo" class="col-sm-12 col-xs-8">
-				<a href="/">
-					<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
-				</a>
+			<div class="container">
+				<div id="logo" class="col-sm-12 col-xs-8">
+					<a href="/">
+						<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
+					</a>
+				</div>
+				<div id="btn-nav" class="visible-xs-block col-xs-4">
+					<button class="btn btn-link btn-md pull-right">
+						<i class="glyphicon glyphicon-menu-hamburger"></i>
+					</button>
+				</div>
 			</div>
-			<div id="btn-nav" class="visible-xs-block col-xs-4">
-				<button class="btn btn-link btn-md pull-right">
-					<i class="glyphicon glyphicon-menu-hamburger"></i>
-				</button>
-			</div>
+
 			<nav class="col-xs-12" id="navbar">
-				<ul>
-					<? foreach($categorias as $categoria) : ?>
-						<li onclick="document.location='/<?=$categoria["id"]?>'">
-							<a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a>
-						</li>
-					<? endforeach; ?>
-				</ul>
+				<div class="container">
+					<ul>
+						<? foreach($categorias as $categoria) : ?>
+							<li onclick="document.location='/<?=$categoria["id"]?>'">
+								<a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a>
+							</li>
+						<? endforeach; ?>
+					</ul>
+				</div>
 			</nav>
+
 		</div>
 
-		<div class="container-fluid" id="main">	
+		<div class="container" id="main">	
 			<?php include("modules.php"); ?>
 		</div>
 

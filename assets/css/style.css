@@ -1,10 +1,11 @@
 
 body {
-	background-color: #321533;
+	background-color: white;
 }
 
 .header {
     margin-right: 0px;
+    background: #321533;
 }
 
 .header #logo {
@@ -73,6 +74,8 @@ body {
 
 .listado article {
     margin-bottom: 25px;
+    height: 343px;
+    overflow: hidden;
 }
 
 .listado .thumbnail {
@@ -95,6 +98,12 @@ body {
 
 .oferta h1 {
     font-size: 24px;
+}
+
+.listado article .foto {
+    height: 250px;
+    background: center no-repeat;
+    background-size: 100%;
 }
 
 .oferta .meta h2, .oferta .meta h3 {
