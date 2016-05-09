@@ -113,6 +113,17 @@ body {
     width: 150px;
 }
 
+.oferta .producto .media-object {
+    width: 150px;
+}
+
+.oferta .revisa.row {
+    background: #EFEFEF;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .listado article .foto {
     height: 250px;
     background: center no-repeat;
