@@ -124,9 +124,9 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 			<br><br>
 
 			<? if($oferta["id_estado"] == "DESACTIVADA"): ?>
-				<h4>Oferta no vigente<br><small>Revisa las siguientes ofertas similares</small></h4>
+				<h4>Oferta no vigente<br><!-- <small>Revisa las siguientes ofertas similares</small> --></h4>
 			<? else: ?>
-				<h4>Revisa las siguientes ofertas similares</small></h4>
+				<!-- <h4>Revisa las siguientes ofertas similares</small></h4> -->
 			<? endif; ?>
 		
 			<? if(false): ?>
