@@ -125,7 +125,7 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 							</a>
 						</div>
 						<div class="media-body">
-							<h4 class="media-heading"><a href="<?=$oferta["url_interna"]?>"><?=$s["titulo"]?></a></h4>
+							<h4 class="media-heading"><a href="<?=$s["url_interna"]?>"><?=$s["titulo"]?></a></h4>
 							<?=$s["descripcion"]?>
 						</div>
 					</div>		
