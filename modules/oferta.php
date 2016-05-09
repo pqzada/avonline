@@ -36,17 +36,18 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 
 <title><?=$oferta["titulo"]?></title>
 
-<div class="oferta">
+<div class="oferta container">
 	<div class="page-header">
 		<h1><?=$oferta["titulo"]?></h1>
 	</div>
 
-	<div class="col-md-4">
+	<div class="col-sm-4">
 		<img src="<?=$oferta["imagen"]?>" style="width:100%;">
+		
 		<br><br>
 
 		<? if($oferta['id_estado'] == 'PUBLICADA')  : ?>
-			<article class="col-xs-12 banner">
+			<article class=" banner">
 				<div class="thumbnail">
 					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 					<!-- @Pagina Desktop - Left AND Mobile-->
@@ -62,7 +63,7 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 		<? endif; ?>
 	</div>
 
-	<div class="col-md-8">
+	<div class="col-sm-8">
 		<p><?=$oferta["descripcion"]?></p>
 
 		<div class="meta">
@@ -114,15 +115,20 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 			<h4>Revisa las siguientes ofertas similares</small></h4>
 		<? endif; ?>
 	
-		<div class="row">
+		<div class="row similares">
 			<? foreach($similares as $s) : ?>
-				<article class="col-xs-12 col-sm-4 col-md-3">
-					<a href="<?=$s["url_interna"]?>">				
-						<div class="thumbnail">
-							<img src="<?=$s["imagen"]?>">
+				<article class="col-xs-12">
+					<div class="media">
+						<div class="media-left">
+							<a href="<?=$s["url_interna"]?>">
+								<img class="media-object" src="<?=$s["imagen"]?>" alt="<?=$s["titulo"]?>">
+							</a>
 						</div>
-						<h5><?=$s["titulo"]?></h5>
-					</a>
+						<div class="media-body">
+							<h4 class="media-heading"><a href="<?=$oferta["url_interna"]?>"><?=$s["titulo"]?></a></h4>
+							<?=$s["descripcion"]?>
+						</div>
+					</div>		
 				</article>
 			<? endforeach; ?>
 		</div>	

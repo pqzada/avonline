@@ -100,6 +100,19 @@ body {
     font-size: 24px;
 }
 
+.oferta .similares .media {
+    height: 100px !important;
+    overflow: hidden;
+}
+
+.oferta .similares article {
+    margin-bottom: 10px;
+}
+
+.oferta .similares .media-left img {
+    width: 150px;
+}
+
 .listado article .foto {
     height: 250px;
     background: center no-repeat;
