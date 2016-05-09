@@ -1,4 +1,6 @@
 <?php
+date_default_timezone_set('America/Santiago');
+
 $url = "/" . $_GET["categoria"] . "/" . $_GET["oferta"];
 $oferta = Oferta::findByUrl($url);
 
@@ -26,6 +28,10 @@ foreach($oferta["categorias"] as $oc) {
 	}
 }
 
+if(date('Y-m-d') > $oferta['fecha_fin']) {
+	$oferta['id_estado'] = 'DESACTIVADA';
+}
+
 ?>
 
 <title><?=$oferta["titulo"]?></title>
@@ -38,19 +44,22 @@ foreach($oferta["categorias"] as $oc) {
 	<div class="col-md-4">
 		<img src="<?=$oferta["imagen"]?>" style="width:100%;">
 		<br><br>
-		<article class="col-xs-12 banner">
-			<div class="thumbnail">
-				<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-				<!-- @Pagina Desktop - Left AND Mobile-->
-				<ins class="adsbygoogle"
-				     style="display:inline-block;width:300px;height:250px"
-				     data-ad-client="ca-pub-3186329023014409"
-				     data-ad-slot="9227416175"></ins>
-				<script>
-				(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</div>
-		</article>
+
+		<? if($oferta['id_estado'] == 'PUBLICADA')  : ?>
+			<article class="col-xs-12 banner">
+				<div class="thumbnail">
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- @Pagina Desktop - Left AND Mobile-->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:300px;height:250px"
+					     data-ad-client="ca-pub-3186329023014409"
+					     data-ad-slot="9227416175"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>
+			</article>
+		<? endif; ?>
 	</div>
 
 	<div class="col-md-8">
