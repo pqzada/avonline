@@ -127,7 +127,7 @@ body {
 .listado article .foto {
     height: 250px;
     background: center no-repeat;
-    background-size: 100%;
+    background-size: contain;
 }
 
 .oferta .meta h2, .oferta .meta h3 {
