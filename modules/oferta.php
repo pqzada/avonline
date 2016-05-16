@@ -40,7 +40,7 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 <meta property="og:type" content="product.group" />
 <meta property="og:title" content="<?=$oferta["titulo"]?>" />
 <meta property="og:description" content="<?=$oferta["descripcion"]?>" />
-<meta property="og:image" content="http://www.avispateonline.cl/<?=$oferta["imagen"]?>" />
+<meta property="og:image" content="http://www.avispateonline.cl<?=$oferta["imagen"]?>" />
 
 
 <div class="oferta container">
