@@ -96,7 +96,7 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 							</div>
 							<div class="media-body">
 								<h4 class="media-heading"><?=$producto["nombre"]?></h4>
-								<?=$producto["descripcion"]?>
+								<?=nl2br($producto["descripcion"])?>
 							</div>
 						</div>						
 
