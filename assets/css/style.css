@@ -183,6 +183,18 @@ body {
         padding: 0px 0px 0px 20px;
     }
 
+    .producto .media {
+        margin-top: 20px;
+    }
+
+    .producto .media-left {
+        width: 100%;
+        float: left;
+    }
+
+    .producto .media-left .media-object{
+        width: 100%;
+    }
 
 }
 
