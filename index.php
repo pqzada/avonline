@@ -30,6 +30,8 @@ $categorias = Categoria::findAll();
 			<meta property="og:title" content="<?=$meta['facebook']['title']?>" />
 			<meta property="og:description" content="<?=$meta['facebook']['description']?>" />
 			<meta property="og:image" content="<?=$meta['facebook']['image']?>" />
+			<meta property="og:site_name" content="Avíspate ONLINE!" />
+    		<meta property="fb:app_id" content="139706469517509" />
 		<? endif; ?>
 
 		<script>
