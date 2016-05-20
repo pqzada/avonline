@@ -40,12 +40,25 @@ $categorias = Categoria::findAll();
 	</head>
 
 	<body>
+	
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.6&appId=139706469517509";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));</script>
+
 		<div class="header row">
 			<div class="container">
-				<div id="logo" class="col-sm-12 col-xs-8">
+				<div id="logo" class="col-sm-8 col-xs-8">
 					<a href="/">
 						<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
 					</a>
+				</div>
+				<div id="megusta" class="col-sm-4 hidden-xs">
+					<div class="fb-page" data-href="https://www.facebook.com/avispateonline/" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/avispateonline/"><a href="https://www.facebook.com/avispateonline/">Avispate Online</a></blockquote></div></div>
 				</div>
 				<div id="btn-nav" class="visible-xs-block col-xs-4">
 					<button class="btn btn-link btn-md pull-right">
