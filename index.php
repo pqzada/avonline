@@ -29,7 +29,7 @@ $categorias = Categoria::findAll();
 			<meta property="og:type" content="<?=$meta['facebook']['type']?>" />
 			<meta property="og:title" content="<?=$meta['facebook']['title']?>" />
 			<meta property="og:description" content="<?=$meta['facebook']['description']?>" />
-			<meta property="og:image" content="<?=$meta['facebook']['image']?>>" />
+			<meta property="og:image" content="<?=$meta['facebook']['image']?>" />
 		<? endif; ?>
 
 		<script>
