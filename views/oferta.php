@@ -1,48 +1,3 @@
-<?php
-date_default_timezone_set('America/Santiago');
-
-$url = "/" . $_GET["categoria"] . "/" . $_GET["oferta"];
-$oferta = Oferta::findByUrl($url);
-
-// Categorias
-$categoriasOferta = Categoria::findForOferta($oferta["id"]);
-foreach($categoriasOferta as $co) {
-	$oferta["categorias"][] = Categoria::findById($co["id_categoria"]);
-}
-
-// Tags
-$tags = Tag::findForOferta($oferta["id"]);
-foreach($tags as $tag) {
-	$oferta["tags"][] = Tag::findById($tag["id_tag"]);
-}
-
-$productos = Producto::findByOfertaId($oferta["id"]);
-
-$similares = array();
-foreach($oferta["categorias"] as $oc) {
-	$tmp = Oferta::findAllForCategoria($oc["id"]);
-	foreach($tmp as $t) {
-		if($t["id"] != $oferta["id"]) {
-			$similares[$t["id"]] = $t;
-		}
-	}
-}
-
-if(date('Y-m-d') > $oferta['fecha_fin']) {
-	$oferta['id_estado'] = 'DESACTIVADA';
-}
-
-?>
-
-<title><?=$oferta["titulo"]?></title>
-
-<meta property="og:url" content="http://www.avispateonline.cl<?=$oferta["url"]?>" />
-<meta property="og:type" content="product.group" />
-<meta property="og:title" content="<?=$oferta["titulo"]?>" />
-<meta property="og:description" content="<?=$oferta["descripcion"]?>" />
-<meta property="og:image" content="http://www.avispateonline.cl<?=$oferta["imagen"]?>" />
-
-
 <div class="oferta container">
 
 	<div class="page-header row">
@@ -112,6 +67,13 @@ if(date('Y-m-d') > $oferta['fecha_fin']) {
 					</div>
 				</div>
 			<? endif; ?>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="fb-like" data-href="http://www.avispateonline.cl<?=$oferta["url_interna"]?>" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+				<br><br>
+			</div>
 
 			<div class="meta row">
 				<div class="col-xs-12 col-sm-6">

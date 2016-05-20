@@ -1,6 +1,7 @@
 <?php
 include(dirname(__FILE__) . "/config.php");
 include(dirname(__FILE__) . "/classes/autoload.php");
+include(dirname(__FILE__) . "/router.php");
 
 $categorias = Categoria::findAll();
 ?>
@@ -8,9 +9,13 @@ $categorias = Categoria::findAll();
 <html>
 
 	<head>		
+		<title><?=$meta['title']?></title>
+
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<meta name="description" content="<?=$meta['description']?>" />
+
 		<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/style.css">
 
@@ -18,6 +23,14 @@ $categorias = Categoria::findAll();
 		<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/assets/js/functions.js"></script>
 		<script type="text/javascript" src="/assets/js/reorder-articles.js"></script>
+
+		<? if(isset($meta['facebook'])): ?>
+			<meta property="og:url" content="<?=$meta['facebook']['url']?>" />
+			<meta property="og:type" content="<?=$meta['facebook']['type']?>" />
+			<meta property="og:title" content="<?=$meta['facebook']['title']?>" />
+			<meta property="og:description" content="<?=$meta['facebook']['description']?>" />
+			<meta property="og:image" content="<?=$meta['facebook']['image']?>>" />
+		<? endif; ?>
 
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -82,7 +95,7 @@ $categorias = Categoria::findAll();
 		</div>
 
 		<div class="container" id="main">	
-			<?php include("modules.php"); ?>
+			<?php include(dirname(__FILE__) . '/views/' . $view . '.php'); ?>
 		</div>
 
 		<div class="footer" class="row">
