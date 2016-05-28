@@ -5,6 +5,7 @@
 	<? foreach($ofertas as $oferta) : ?>
 
 		<? if($idx == 4): ?>
+		<article class="col-xs-12" style="height:110px;">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Adaptable homepage -->
 			<ins class="adsbygoogle"
@@ -15,6 +16,7 @@
 			<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 			</script>
+		</article>
 		<? endif; ?>
 
 		<article class="col-xs-12 col-sm-4">
