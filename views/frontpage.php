@@ -5,7 +5,7 @@
 	<? foreach($ofertas as $oferta) : ?>
 
 		<? if($idx == 4): ?>
-		<article class="col-xs-12" style="height:110px;">
+		<article class="col-xs-12" id="banner-frontpage">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Adaptable homepage -->
 			<ins class="adsbygoogle"

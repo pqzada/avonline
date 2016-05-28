@@ -166,7 +166,18 @@ body {
     color: white;
 }
 
+#banner-frontpage {
+    height: auto !important;
+    background: orange;
+    padding: 10px;
+}
+
 @media (max-width: 767px) {
+
+    #banner-frontpage {
+        margin-bottom: 25px;
+    }
+
     #navbar {
         display: none;
         height: auto;
