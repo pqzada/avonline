@@ -9,5 +9,6 @@ require_once ('Oferta.php');
 require_once ('Producto.php');
 require_once ('Slug.php');
 require_once ('Tag.php');
+require_once ('Facebook.php');
 
 ?>

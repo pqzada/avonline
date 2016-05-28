@@ -22,6 +22,9 @@ if( isset($_POST["editar"]) ) {
 			$image_url = Imagen::upload($_FILES["imagen"], $oferta_id);
 			$ofertaMod->updateImagen($image_url);
 		}
+
+		$oferta = Oferta::findById($oferta_id);
+		$result = Facebook::debug('http://www.avispateonline.cl' . $oferta['url_interna']);
 		
 	} else {
 		echo "<pre>";
@@ -69,6 +72,9 @@ if( isset($_POST['publicar']) ) {
 
 		$image_url = Imagen::upload($_FILES["imagen"], $oferta_id);
 		$oferta->updateImagen($image_url);
+
+		$oferta = Oferta::findById($oferta_id);
+		$result = Facebook::debug('http://www.avispateonline.cl' . $oferta['url_interna']);
 		
 	} else {
 		echo "<pre>";
