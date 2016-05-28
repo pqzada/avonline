@@ -8,7 +8,7 @@ $categorias = Categoria::findAll();
 
 <html>
 
-	<head>		
+	<head profile="http://gmpg.org/xfn/11" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product.group: http://ogp.me/ns/product.group#">	
 		<title><?=$meta['title']?></title>
 
 		<meta charset="UTF-8">
