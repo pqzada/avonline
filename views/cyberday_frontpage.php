@@ -24,7 +24,7 @@
 		</article>
 		<? endif; ?>
 
-		<article class="col-xs-12 col-sm-4 col-lg-3">
+		<article class="col-xs-12 col-sm-4">
 			<div class="row precios">
 				<div class="col-xs-6" style="text-align: right;">
 					<small>Antes</small><br>
