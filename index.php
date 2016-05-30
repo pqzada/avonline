@@ -88,8 +88,9 @@ $categorias = Categoria::findAll();
 						<? foreach($categorias as $categoria) : ?>
 							<li onclick="document.location='/<?=$categoria["id"]?>'">
 								<a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a>
-							</li>
+							</li>							
 						<? endforeach; ?>
+						<li><a href="/cyberday" class="btn btn-success"><b>Ofertas Cyberday</b></a></li>
 					</ul>
 				</div>
 			</nav>

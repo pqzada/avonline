@@ -214,6 +214,26 @@ body {
 }
 
 /* Cyberday */
+.frontpage .jumbotron {
+    color: white;
+    background: url(/assets/images/cyberday_icon.png) no-repeat 35px 47px #1C0738 !important;
+    padding-left: 185px;
+    margin-top: 15px;
+    border-radius: 0px;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+}
+
+.frontpage .jumbotron h1 small {
+    color: #E3116A;
+}
+
+.frontpage .jumbotron h1 {
+    line-height: 80px;
+    margin-top: 0px;
+}
+
 div#cyberday-banner {
     background: url(/assets/images/cyberday.png) center;
     height: 150px;
@@ -222,11 +242,19 @@ div#cyberday-banner {
     cursor: pointer;
 }
 
-@media (max-width: 767px) {
+.precios small {
+    color: #333;
+    font-weight: bold;
+}
 
-    div#cyberday-banner {
-        background: url(/assets/images/cyberday_mini.png) center no-repeat;
-        background-size: contain;
+.cyberday article .foto {
+    height: 200px;
+}
+
+@media (max-width: 450px) {
+
+    .frontpage .jumbotron a {
+        margin-left: -150px;
     }
 
 }

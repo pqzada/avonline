@@ -1,14 +1,11 @@
-<div class="frontpage listado">
+<div class="frontpage cyberday listado">
 
-	<!-- <a href="/cyberday"><div class="col-xs-12" id="cyberday-banner"></div></a> -->
-
-	<div class="jumbotron">
-
-	  <h1><small>Avispate este</small> cyberday</h1>
-	  <p>En AVISPATE ONLINE te buscamos las mejores ofertas disponibles durante este cyberday!... </p>
-	  <p><a class="btn btn-success btn-lg" href="/cyberday" role="button"><b>OFERTAS CYBERDAY</b></a></p>
-	</div>
 	<br>
+	
+	<p class="alert alert-success">En <em>AVISPATE ONLINE</em> te buscamos las mejores ofertas disponibles durante este cyberday!... Revísalas a continuación:</p>
+
+	<br>
+
 	<? $idx = 1; ?>
 	<? foreach($ofertas as $oferta) : ?>
 
@@ -27,13 +24,23 @@
 		</article>
 		<? endif; ?>
 
-		<article class="col-xs-12 col-sm-4">
+		<article class="col-xs-12 col-sm-4 col-lg-3">
+			<div class="row precios">
+				<div class="col-xs-6" style="text-align: right;">
+					<small>Antes</small><br>
+					<?=$oferta["precio_antes"]?>
+				</div>
+				<div class="col-xs-6" style="">
+					<small>Ahora</small><br>
+					<?=$oferta["precio_ahora"]?>
+				</div>
+			</div>
 			<a href="<?=$oferta["url_interna"]?>">				
 				<div class="foto" style="background-image: url('<?=$oferta["imagen"]?>')">
 				</div>
 				<h2><?=$oferta["titulo"]?></h2>
 			</a>
-			<p><?=$oferta["descripcion"]?></p>			
+			<p><?=substr($oferta["descripcion"], 0, 100)?>...</p>			
 		</article>
 
 		<? $idx++; ?>

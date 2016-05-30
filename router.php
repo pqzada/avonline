@@ -20,6 +20,16 @@ if( isset($_GET['categoria']) && !is_null($_GET['categoria']) && $_GET['categori
 		$view = 'tag_oferta';
 	}
 
+} else if( isset($_GET['cyberday']) ) {
+
+	if( $_GET['cyberday'] == "" ) {
+		include(dirname(__FILE__) . '/controllers/CyberdayCtrl.php');
+		$view = 'cyberday_frontpage';
+	} else {
+		include(dirname(__FILE__) . '/controllers/CyberdayProductoCtrl.php');
+		$view = 'cyberday_producto';
+	}
+
 } else {
 	include(dirname(__FILE__) . '/controllers/FrontpageCtrl.php');
 	$view = 'frontpage';
