@@ -38,7 +38,7 @@ if( isset($_POST["editar"]) ) {
  */
 if( isset($_GET["eliminar"]) && !is_null($_GET["eliminar"]) ) {
 	Cyberday::delete($_GET["eliminar"]);
-	Categoria::deleteCategoriacyberday($_GET["eliminar"]);
+	Categoria::deleteCategoriaCyberday($_GET["eliminar"]);
 }
 
 /**
@@ -262,16 +262,16 @@ function productos(id) {
 }
 
 function desactivar(id) {
-	document.location = "/ao-panel/?mod=cyberdays&desactivar=" + id;
+	document.location = "/ao-panel/?mod=cyberday&desactivar=" + id;
 }
 
 function publicar(id) {
-	document.location = "/ao-panel/?mod=cyberdays&publicar=" + id;
+	document.location = "/ao-panel/?mod=cyberday&publicar=" + id;
 }
 
 function eliminar(id) {
 	if(confirm("¿Estás seguro que deseas eliminar el producto?")) {
-		document.location = "/ao-panel/?mod=cyberdays&eliminar=" + id;
+		document.location = "/ao-panel/?mod=cyberday&eliminar=" + id;
 	}
 }
 

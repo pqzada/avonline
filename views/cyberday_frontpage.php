@@ -47,4 +47,9 @@
 
 	<? endforeach; ?>
 
+	<? if($idx == 1): ?>
+	<h1 class="text-center">Falta poquito!</h1>	
+	<div class="text-center"><img src="/assets/images/cyberday_falta.png"></div>
+	<? endif; ?>
+
 </div>

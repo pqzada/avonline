@@ -82,7 +82,7 @@ class Cyberday {
 		global $db;		
 
 		// Delete imagen
-		cyberday::deleteImagen($id);
+		Cyberday::deleteImagen($id);
 
 		// Delete cyberday
 		$sql = "DELETE FROM cyberday WHERE id = :id_cyberday";

@@ -59,6 +59,17 @@ class Categoria {
 
 	}
 
+	public static function deleteCategoriaCyberday($oferta_id) {
+
+		global $db;
+
+		$sql = "DELETE FROM cyberday_categoria WHERE id_oferta =  :id_oferta";
+		$stmt = $db->prepare($sql);
+		$stmt->bindParam(':id_oferta', $oferta_id);   
+		$stmt->execute();
+
+	}
+
 	public static function register($categorias, $oferta_id) {
 
 		global $db;
