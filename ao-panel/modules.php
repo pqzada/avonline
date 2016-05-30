@@ -18,6 +18,10 @@ if( isset($_GET['mod']) ) {
 		case 'productos':
 			include("modules/admin_productos.php");
 			break;
+
+		case 'cyberday':
+			include("modules/admin_cyberday.php");
+			break;
 		
 		default:
 			include("modules/admin_index.php");

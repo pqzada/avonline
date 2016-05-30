@@ -5,5 +5,6 @@
 		<li role="presentation"><a title="Empresas" href="<?=$admin_folder?>/?mod=empresas">Empresas</a></li>
 		<li role="presentation"><a title="Categorías" href="<?=$admin_folder?>/?mod=categorias">Categorías</a></li>
 		<li role="presentation"><a title="Sitio web" href="/" target="_blank">Sitio Web</a></li>
+		<li role="presentation"><a title="Cyberday" href="<?=$admin_folder?>/?mod=cyberday">Cyberday</a></li>
 	</ul>
 </nav>

@@ -23,6 +23,17 @@ class Categoria {
 
 	}
 
+	public static function findForCyberday($id) {
+
+		global $db;
+
+		$sql = "SELECT id_categoria FROM cyberday_categoria WHERE id_cyberday = $id";
+		$stmt = $db->query($sql);
+		$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		return $results;
+
+	}
+
 	public static function findById($id) {
 
 		global $db;

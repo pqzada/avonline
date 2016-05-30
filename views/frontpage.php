@@ -1,5 +1,6 @@
 <div class="frontpage listado">
 
+	<a href="/cyberday"><div class="col-xs-12" id="cyberday-banner"></div></a>
 	<br>
 	<? $idx = 1; ?>
 	<? foreach($ofertas as $oferta) : ?>

@@ -213,3 +213,20 @@ body {
 
 }
 
+/* Cyberday */
+div#cyberday-banner {
+    background: url(/assets/images/cyberday.png) center;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+
+    div#cyberday-banner {
+        background: url(/assets/images/cyberday_mini.png) center no-repeat;
+        background-size: contain;
+    }
+
+}
