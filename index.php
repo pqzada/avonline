@@ -4,6 +4,9 @@ include(dirname(__FILE__) . "/classes/autoload.php");
 include(dirname(__FILE__) . "/router.php");
 
 $categorias = Categoria::findAll();
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 ?>
 
 <html>
