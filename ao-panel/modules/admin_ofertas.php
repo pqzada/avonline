@@ -116,6 +116,10 @@ if( isset($_GET["id"]) ) {
 
 ?>
 
+<link rel="stylesheet" type="text/css" href="/assets/css/dataTables.bootstrap.css">
+<script type="text/javascript" src="/assets/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/assets/js/dataTables.bootstrap.js"></script>
+
 <div id="empresas">
 
 	<div class="page-header">
@@ -214,19 +218,18 @@ if( isset($_GET["id"]) ) {
 
 	<div class="col-md-8">
 		<h2>Ofertas registradas</h2>
-		<table class="table table-condensed table-hover">
+		<table class="table table-striped table-condensed table-hover" id="example" data-page-length="40">
 			<thead>
 				<tr>
-					<th>ID</th>
-					<th>Categoría</th>
-					<th>Titulo</th>
-					<th></th>
+					<th>Estado</th>
+					<th>Título</th>					
+					<th>Acciones</th>
 				</tr>
 			</thead>
 			<tbody>
 				<? foreach($results as $r): ?>
 					<tr>
-						<td><?=$r['id']?></td>
+						<td><?=$r['id_estado']?></td>
 						<td><?=$r['titulo']?></td>
 						<td>
 							<button onclick="editar(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Editar">
@@ -270,6 +273,8 @@ $(document).ready(function() {
 	$(function () {
 	  $('[data-toggle="tooltip"]').tooltip()
 	});
+
+	$('#example').DataTable();
 
 });
 
