@@ -2,12 +2,12 @@
 
 	<!-- <a href="/cyberday"><div class="col-xs-12" id="cyberday-banner"></div></a> -->
 
-	<div class="jumbotron">
+	<!-- <div class="jumbotron">
 
 	  <h1><small>Avispate este</small> cyberday</h1>
 	  <p>En AVISPATE ONLINE te buscamos las mejores ofertas disponibles durante este cyberday!... </p>
 	  <p><a class="btn btn-success btn-lg" href="/cyberday" role="button"><b>OFERTAS CYBERDAY</b></a></p>
-	</div>
+	</div> -->
 	<br>
 	<? $idx = 1; ?>
 	<? foreach($ofertas as $oferta) : ?>

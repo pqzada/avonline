@@ -29,7 +29,9 @@ $categorias = Categoria::findAll();
 			<meta property="og:type" content="<?=$meta['facebook']['type']?>" />
 			<meta property="og:title" content="<?=$meta['facebook']['title']?>" />
 			<meta property="og:description" content="<?=$meta['facebook']['description']?>" />
-			<meta property="og:image" content="<?=$meta['facebook']['image']?>" />
+			<meta property="og:image" content="<?=$meta['facebook']['image']['url']?>" />
+			<meta property="og:image:width" content="<?=$meta['facebook']['image']['width']?>" />
+			<meta property="og:image:height" content="<?=$meta['facebook']['image']['height']?>" />
 			<meta property="og:site_name" content="Avíspate ONLINE!" />
     		<meta property="fb:app_id" content="139706469517509" />
 		<? endif; ?>
@@ -90,7 +92,7 @@ $categorias = Categoria::findAll();
 								<a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a>
 							</li>							
 						<? endforeach; ?>
-						<li><a href="/cyberday" class="btn btn-success"><b>Ofertas Cyberday</b></a></li>
+						<!-- <li><a href="/cyberday" class="btn btn-success"><b>Ofertas Cyberday</b></a></li> -->
 					</ul>
 				</div>
 			</nav>

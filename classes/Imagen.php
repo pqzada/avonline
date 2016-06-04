@@ -52,6 +52,19 @@ class Imagen {
 
 	}
 
+	public static function getImageData($imageUrl) {
+
+		$data = getimagesize($imageUrl);
+		$dim = explode(' ', str_replace('"', '', $data[3]));
+		
+		return array(
+			'url' => $imageUrl,
+			'width' => explode('=', $dim[0])[1],
+			'height' => explode('=', $dim[1])[1],
+		);
+		
+	}
+
 }
 
 ?>
