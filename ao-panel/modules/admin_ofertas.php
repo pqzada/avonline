@@ -88,7 +88,7 @@ if( isset($_POST['publicar']) ) {
 /**
  * LISTADO OFERTAS
  */
-$results = Oferta::findAll();
+$results = Oferta::findAllPublicadas();
 
 /**
  * EDITAR OFERTA FORM
@@ -221,7 +221,7 @@ if( isset($_GET["id"]) ) {
 		<table class="table table-striped table-condensed table-hover" id="example" data-page-length="40">
 			<thead>
 				<tr>
-					<th>Estado</th>
+					<th>ID</th>
 					<th>Título</th>					
 					<th>Acciones</th>
 				</tr>
@@ -229,7 +229,7 @@ if( isset($_GET["id"]) ) {
 			<tbody>
 				<? foreach($results as $r): ?>
 					<tr>
-						<td><?=$r['id_estado']?></td>
+						<td><?=$r['id']?></td>
 						<td><?=$r['titulo']?></td>
 						<td>
 							<button onclick="editar(<?=$r['id']?>)" class="btn btn-default btn-md" data-toggle="tooltip" data-placement="top" title="Editar">
@@ -274,7 +274,9 @@ $(document).ready(function() {
 	  $('[data-toggle="tooltip"]').tooltip()
 	});
 
-	$('#example').DataTable();
+	$('#example').DataTable({
+		"order": [[ 0, "desc" ]]
+	});
 
 });
 

@@ -140,6 +140,21 @@ class Oferta {
 		
 	}
 
+	public static function findAllPublicadas() {
+
+		global $db;
+
+		$stmt = $db->query("SELECT * FROM oferta WHERE id_estado = 'PUBLICADA' ORDER BY id DESC");
+		if($stmt !== false) {
+			$results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+		} else {
+			$results = array();
+		}
+
+		return $results;
+		
+	}
+
 	public static function findAllFrontPage() {
 
 		global $db;
