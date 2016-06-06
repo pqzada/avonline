@@ -1,12 +1,12 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 include(dirname(__FILE__) . "/config.php");
 include(dirname(__FILE__) . "/classes/autoload.php");
 include(dirname(__FILE__) . "/router.php");
 
 $navCategorias = Categoria::findAll();
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 ?>
 
 <!DOCTYPE html>
@@ -26,7 +26,6 @@ ini_set('display_errors', 1);
 		<script type="text/javascript" src="/assets/js/jquery-2.2.1.min.js"></script>
 		<script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
 		<script type="text/javascript" src="/assets/js/functions.js"></script>
-		<script type="text/javascript" src="/assets/js/reorder-articles.js"></script>
 
 		<? if(isset($meta['facebook'])): ?>
 			<meta property="og:url" content="<?=$meta['facebook']['url']?>" />

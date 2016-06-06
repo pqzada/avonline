@@ -10,7 +10,7 @@ $meta = array(
 		'type' => 'website',
 		'title' => 'Descuentos en productos de ' . $categoria["titulo"] . ' en Avispate Online!', 
 		'description' => 'Encuentra en un sólo lugar las mejores ofertas de internet para ' . $categoria["titulo"],
-		'image' => Imagen::getImageData('http://www.avispateonline.cl/assets/images/Logo_Avispate_Grande_Fondo.png')
+		'image' => Imagen::getImageData($site_url . '/assets/images/Logo_Avispate_Grande_Fondo.png')
 	)
 );
 ?>

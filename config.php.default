@@ -9,4 +9,6 @@ $db = new PDO('mysql:host=localhost;dbname=avispate;charset=utf8mb4', 'root', 'r
 $upload_images_folder = "/Users/pqzada/Projects/personal/avonline/upload";
 $upload_images_path = "/upload";
 
+$site_url = 'http://avispateonline.dev';
+
 ?>

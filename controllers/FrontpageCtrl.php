@@ -9,7 +9,7 @@ $meta = array(
 		'type' => 'website',
 		'title' => 'Avispate ONLINE - Las mejores ofertas de internet en un sólo lugar',
 		'description' => 'Encuentra en un sólo lugar las mejores ofertas de internet para mujeres, hombres, niños, niñas, hogar y viajes',
-		'image' => Imagen::getImageData('http://www.avispateonline.cl/assets/images/Logo_Avispate_Grande_Fondo.png')
+		'image' => Imagen::getImageData($site_url . '/assets/images/Logo_Avispate_Grande_Fondo.png')
 	)
 );
 ?>

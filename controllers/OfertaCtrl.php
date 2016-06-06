@@ -40,7 +40,7 @@ $meta = array(
 		'type' => 'product.group',
 		'title' => $oferta["titulo"],
 		'description' => $oferta["descripcion"],
-		'image' => Imagen::getImageData('http://www.avispateonline.cl' . $oferta["imagen"])
+		'image' => Imagen::getImageData($site_url . $oferta["imagen"])
 	)
 );
 
