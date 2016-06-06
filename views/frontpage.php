@@ -8,11 +8,13 @@
 	  <p>En AVISPATE ONLINE te buscamos las mejores ofertas disponibles durante este cyberday!... </p>
 	  <p><a class="btn btn-success btn-lg" href="/cyberday" role="button"><b>OFERTAS CYBERDAY</b></a></p>
 	</div> -->
-	<br>
+	<div class="page-header">
+		<h1>Últimos descuentos</h1>
+	</div>
 	<? $idx = 1; ?>
 	<? foreach($ofertas as $oferta) : ?>
 
-		<? if($idx == 4): ?>
+		<? if($idx == 5): ?>
 		<article class="col-xs-12" id="banner-frontpage">
 			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 			<!-- Adaptable homepage -->
@@ -27,13 +29,12 @@
 		</article>
 		<? endif; ?>
 
-		<article class="col-xs-12 col-sm-4">
-			<a href="<?=$oferta["url_interna"]?>">				
-				<div class="foto" style="background-image: url('<?=$oferta["imagen"]?>')">
-				</div>
-				<h2><?=$oferta["titulo"]?></h2>
+		<article class="col-xs-12 col-sm-3">
+			<a href="<?=$oferta["url_interna"]?>">
+				<div class="thumbnail"><img src="<?=$oferta["imagen"]?>" alt="<?=$oferta["titulo"]?>"></div>
+				<h3><?=$oferta["titulo"]?></h3>
 			</a>
-			<p><?=$oferta["descripcion"]?></p>			
+			<p><?=substr($oferta["descripcion"], 0, 60)?>...</p>			
 		</article>
 
 		<? $idx++; ?>

@@ -9,6 +9,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 1);
 ?>
 
+<!DOCTYPE html>
 <html>
 
 	<head profile="http://gmpg.org/xfn/11" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product.group: http://ogp.me/ns/product.group#">	
@@ -92,7 +93,7 @@ ini_set('display_errors', 1);
 					<ul>
 						<? foreach($categorias as $categoria) : ?>
 							<li onclick="document.location='/<?=$categoria["id"]?>'">
-								<a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a>
+								<h2><a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a></h2>
 							</li>							
 						<? endforeach; ?>
 						<!-- <li><a href="/cyberday" class="btn btn-success"><b>Ofertas Cyberday</b></a></li> -->
