@@ -91,9 +91,9 @@ ini_set('display_errors', 1);
 			<nav class="col-xs-12" id="navbar">
 				<div class="container">
 					<ul>
-						<? foreach($navCategorias as $categoria) : ?>
-							<li onclick="document.location='/<?=$categoria["id"]?>'">
-								<h2><a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a></h2>
+						<? foreach($navCategorias as $navCategoria) : ?>
+							<li onclick="document.location='/<?=$navCategoria["id"]?>'">
+								<h2><a href="/<?=$navCategoria["id"]?>"><?=$navCategoria["nombre"]?></a></h2>
 							</li>							
 						<? endforeach; ?>
 						<!-- <li><a href="/cyberday" class="btn btn-success"><b>Ofertas Cyberday</b></a></li> -->
