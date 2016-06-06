@@ -1,10 +1,10 @@
 <div class="oferta container">
 
 	<div class="page-header row">
-		<div class="col-xs-12 col-sm-9">
+		<div class="col-xs-12 col-sm-9 col-xs-12">
 			<h1><?=$oferta["titulo"]?></h1>
 		</div>
-		<div class="col-xs-12 col-sm-3">
+		<div class="col-xs-12 col-sm-3 hidden-xs">
 			<? if($oferta["id_estado"] == "PUBLICADA"): ?>
 				<a href="<?=$oferta["url_externa"]?>" class="btn btn-danger btn-lg pull-right" rel="no-follow" target="_blank">Visitar oferta</a>
 			<? endif; ?>
@@ -63,7 +63,8 @@
 			<? if($oferta["id_estado"] == "PUBLICADA"): ?>
 				<div class="revisa row">
 					<div class="col-xs-12">
-						<a href="<?=$oferta["url_externa"]?>" class="btn btn-primary pull-right" rel="no-follow" target="_blank">Revisa estos y más productos...</a>
+						<a href="<?=$oferta["url_externa"]?>" class="btn btn-primary pull-right hidden-xs" rel="no-follow" target="_blank">Revisa estos y más productos...</a>
+						<a href="<?=$oferta["url_externa"]?>" class="btn btn-lg btn-success pull-right visible-xs btn-block" rel="no-follow" target="_blank">VISITAR OFERTA</a>
 					</div>
 				</div>
 			<? endif; ?>

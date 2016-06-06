@@ -12,8 +12,10 @@ $navCategorias = Categoria::findAll();
 <!DOCTYPE html>
 <html>
 
-	<head profile="http://gmpg.org/xfn/11" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product.group: http://ogp.me/ns/product.group#">	
+	<head>	
 		<title><?=$meta['title']?></title>
+
+		<link rel='shortcut icon' type='image/x-icon' href='/favicon.ico' />
 
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -74,7 +76,7 @@ $navCategorias = Categoria::findAll();
 			<div class="container">
 				<div id="logo" class="col-sm-8 col-xs-8">
 					<a href="/">
-						<img src="/assets/images/Logo_Avispate_Chico_Fondo.png">
+						<img src="/assets/images/Logo_Avispate_Chico_Fondo.png" alt="Avispate ONLINE">
 					</a>
 				</div>
 				<div id="megusta" class="col-sm-4 hidden-xs">
