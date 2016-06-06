@@ -3,7 +3,7 @@ include(dirname(__FILE__) . "/config.php");
 include(dirname(__FILE__) . "/classes/autoload.php");
 include(dirname(__FILE__) . "/router.php");
 
-$categorias = Categoria::findAll();
+$navCategorias = Categoria::findAll();
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -91,7 +91,7 @@ ini_set('display_errors', 1);
 			<nav class="col-xs-12" id="navbar">
 				<div class="container">
 					<ul>
-						<? foreach($categorias as $categoria) : ?>
+						<? foreach($navCategorias as $categoria) : ?>
 							<li onclick="document.location='/<?=$categoria["id"]?>'">
 								<h2><a href="/<?=$categoria["id"]?>"><?=$categoria["nombre"]?></a></h2>
 							</li>							

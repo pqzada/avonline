@@ -1,7 +1,7 @@
 <div class="categoria listado">
 
 	<div class="page-header">
-		<h1>Descuentos en <?=$categoria["nombre"]?></h1>
+		<h1>Descuentos en productos de <?=$categoria["nombre"]?></h1>
 	</div>
 
 	<? $idx = 1; ?>
