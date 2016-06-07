@@ -24,16 +24,25 @@ $xml->addAttribute('xmlns', 'http://www.sitemaps.org/schemas/sitemap/0.9');
 /**
  * Páginas genéricas
  */
-$url = $xml->addChild('url')->addChild('loc', 'http://wwww.avispateonline.cl');
+$url = $xml->addChild('url');
+$url->addChild('loc', 'http://wwww.avispateonline.cl');
+$url->addChild('changefreq', 'daily');
+$url->addChild('priority', '1.0');
 
 // CATEGORIAS
 foreach($categorias as $categoria) {
-	$url = $xml->addChild('url')->addChild('loc', htmlspecialchars('http://wwww.avispateonline.cl/' . $categoria["id"]));
+	$url = $xml->addChild('url');
+	$url->addChild('loc', htmlspecialchars('http://wwww.avispateonline.cl/' . $categoria["id"]));
+	$url->addChild('changefreq', 'daily');
+	$url->addChild('priority', '0.8');
 }
 
 // OFERTAS
 foreach($ofertas as $oferta) {
-	$url = $xml->addChild('url')->addChild('loc', htmlspecialchars('http://wwww.avispateonline.cl/' . $oferta["url_interna"]));
+	$url = $xml->addChild('url');
+	$url->addChild('loc', htmlspecialchars('http://wwww.avispateonline.cl/' . $oferta["url_interna"]));
+	$url->addChild('changefreq', 'weekly');
+	$url->addChild('priority', '0.5');
 }
 
 
