@@ -38,7 +38,7 @@
 
 		<div class="col-sm-8">
 
-			<p><?=$oferta["descripcion"]?>. <br>Entre los productos de esta oferta encontrarás: </p>		
+			<p><?=nl2br($oferta["descripcion"])?>.</p>	
 
 			<? if(count($productos) > 0): ?>
 
