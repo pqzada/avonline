@@ -100,6 +100,7 @@
 			<? endif; ?>
 		
 			<div class="row similares">
+				<? $idx = 0; ?>
 				<? foreach($similares as $s) : ?>
 					<article class="col-xs-12">
 						<div class="media">
@@ -114,6 +115,7 @@
 							</div>
 						</div>		
 					</article>
+					<? if($idx++ == 3) break; ?>
 				<? endforeach; ?>
 			</div>
 
